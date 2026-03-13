@@ -1,34 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+       <h1>This is React Newspeed</h1>
+       <Person></Person>
+       <Student name="Hridoy Akanda" dep="Math"></Student>
+       <Student name="Jecika Jeci" dep="physics"></Student>
+       <Student name="Monika shill" dep="Higher math"></Student>
+      <Devoloper name="Rayhan" tech="Phthon"></Devoloper>
+      <Devoloper name="Yeasin ahmed" tech="JavaScript"></Devoloper>
+      <Details name="Hridoy Akanda" age="22" ocupation="student"></Details>
+      <Details name="Esrat Muslim Esha" age="16" ocupation="student"></Details>
+      <Details name="Hridita Akanda" age="5" ocupation="student"></Details>
+    
     </>
+  )
+}
+
+//  Component Declare
+
+function Person () {  // Normal Funtion er motoi bt Funtion er name er first leter Boro Hater hbe.
+  // Eikhne ami variable a created korte pari.
+  const age = 22 ;
+  const name = "Hridoy Akanda"
+
+  // Style 
+  const style = {
+    color: "red",
+    
+  }
+  return ( // eikhne Return Korte hbe. Akadik jinis return korte hbe <> </> dite hbe. Funtion ta korar jonne upore call korte hbe.
+
+    <div>
+      <p style={style}>I am {name} Basic Learnin In React {age}</p>
+    </div>
+
+  );
+};
+
+
+function Devoloper (corn){
+  return(
+    <div style={{
+      color: "yellow",
+      margin : "10px",
+      padding: "10px",
+      border: "4px solid purple",
+      borderRadius: "10px"
+    }}>
+      <p>Devoloper : {corn.name}</p>
+      <p>Technology : {corn.tech}</p>
+    </div>
+  )
+}
+
+function List () {
+  return(
+    <div>
+      <h1>This is Liist items</h1>
+      <ul>
+        <li>Furniture</li>
+        <li>Chair</li>
+        <li>Tbale</li>
+      </ul>
+    </div>
+  );
+};
+
+function Student (props){
+  // console.log(props);
+  
+  return(
+   <div className='student'>
+     <p>Name :{props.name}</p>
+    <p>Dept : {props.dep}</p>
+   </div>
+  )
+};
+
+// const {name, age, ocupation} = { name : "Hridoy Akanda", age : 22, ocupation : "student"}
+
+function Details ({name, age, ocupation}){
+  return(
+    <div className='student'>
+      <p>Name :{name} </p>
+      <p>age : {age}</p>
+      <p>ocupation : {ocupation} </p>
+    </div>
   )
 }
 
