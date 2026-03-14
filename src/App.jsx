@@ -1,6 +1,9 @@
 
 import './App.css'
-import ToDo from './todo';
+// import ToDo from './todo';
+import Book from './book';
+import Actors from './actor';
+import Shopping from './shoping';
 // import system connected
 // 1. import
 // 2. Name 
@@ -9,28 +12,64 @@ import ToDo from './todo';
 
 function App() {
   
+  //  const Actress = ["Shakib Khan", "Umar sanny", "Bappraz", "Zerin"]
+  // const time = 50;
 
-  const time = 50;
+  // const books = [
+  //   {id : 1, name : 'Bangla', price : 200},
+  //   {id : 2, name : 'English', price : 300},
+  //   {id : 3, name : 'Physics', price : 700},
+  //   {id : 4, name : 'Higher', price : 1000},
+  // ]
+
+
+  // const shoppings = [
+  //   { item : 1, Name : "Chair",  Price : 500, Brand : "Panguine Brand",},
+  //   { item : 2, Name : "Table",  Price : 700, Brand : "Digital Brand",},
+  //   { item : 3, Name : "Funniture",  Price : 200, Brand : "New Brand",},
+  //   { item : 4, Name : "Almary",  Price : 2000, Brand : "Jarnalist Brand",},
+  //   { item : 5, Name : "Palon Khat",  Price : 7000, Brand : "Chaines Brand",},
+  // ]
+  const books = [
+    { id : 1, Name : "Bangla",  Price : 500, Brand : "Panguine Brand",},
+    { id : 2, Name : "English",  Price : 700, Brand : "Digital Brand",},
+    { id : 3, Name : "Math",  Price : 200, Brand : "New Brand",},
+    { id : 4, Name : "Physies",  Price : 2000, Brand : "Jarnalist Brand",},
+    { id : 5, Name : "Biology",  Price : 7000, Brand : "Chaines Brand",},
+  ]
 
   return (
     <>
-      <h1>React Core Concept</h1>
-      {/* //  <h1>This is React Newspeed</h1>
-      //  <Person></Person>
-      //  <Student name="Hridoy Akanda" dep="Math"></Student>
-      //  <Student name="Jecika Jeci" dep="physics"></Student>
-      //  <Student name="Monika shill" dep="Higher math"></Student>
-      // <Devoloper name="Rayhan" tech="Phthon"></Devoloper>
-      // <Devoloper name="Yeasin ahmed" tech="JavaScript"></Devoloper>
-      // <Details name="Hridoy Akanda" age="22" ocupation="student"></Details>
-      // <Details name="Esrat Muslim Esha" age="16" ocupation="student"></Details>
-      // <Details name="Hridita Akanda" age="5" ocupation="student"></Details> */}
+     
+      <h1>Book Collection</h1>
 
-      {/* // Todo function */}
+      <Book book={books}></Book>
+      
+      {/* <Shopping shop={shoppings} ></Shopping> */}
 
-      <ToDo task="Learn react" isDone={true} time={time}></ToDo>
+      {/* {
+        Actress.map(actor => <Actors actor={actor}></Actors>)
+      } */}
+
+      {/* {
+        books.map(book => <Book key={book.id} book={book}></Book>)
+      } */}
+        {/* <h1>This is React Newspeed</h1>
+        <Person></Person>
+        <Student name="Hridoy Akanda" dep="Math"></Student>
+        <Student name="Jecika Jeci" dep="physics"></Student>
+        <Student name="Monika shill" dep="Higher math"></Student>
+       <Devoloper name="Rayhan" tech="Phthon"></Devoloper>
+       <Devoloper name="Yeasin ahmed" tech="JavaScript"></Devoloper>
+       <Details name="Hridoy Akanda" age="22" ocupation="student"></Details>
+       <Details name="Esrat Muslim Esha" age="16" ocupation="student"></Details>
+       <Details name="Hridita Akanda" age="5" ocupation="student"></Details>
+
+      
+
+     <ToDo task="Learn react" isDone={true} time={time}></ToDo>
       <ToDo task="Learn java" isDone={false}></ToDo>
-      <ToDo task="Take a shawer" isDone={true}></ToDo>
+      <ToDo task="Take a shawer" isDone={true}></ToDo> */}
 
       
     
@@ -111,4 +150,4 @@ function Details ({name, age, ocupation}){
   )
 }
 
-export default App
+export default App;

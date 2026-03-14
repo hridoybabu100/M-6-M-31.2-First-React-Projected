@@ -57,7 +57,8 @@
 
 
 // Ehhn Ami sob mittha gula ke dekhate chai || . done jodi sotto hoi tahole vitore jaw
-export default function ToDo ({task, isDone, time = 0}){
-    return isDone || <li> Pending : {task}</li>
-}
+
+// export default function ToDo ({task, isDone, time = 0}){
+//     return isDone || <li> Pending : {task}</li>
+// }
 
